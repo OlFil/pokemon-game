@@ -1,0 +1,84 @@
+$bg:#202736;
+
+.root {
+	background: $bg;
+	background-attachment: fixed;
+	background-size: cover;
+	position: relative;
+	min-height: 100vh;
+	margin: 0 auto;
+	z-index: 1;
+	}
+	.root::before {
+	content: '';
+	position: fixed;
+	background: url(https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa83c9ee4-6981-4ba7-8955-4ceac8f9778f%2FStars.svg?table=block&id=1c0dfcba-e558-4d33-8664-ec85b3663249&spaceId=1aa618a7-2041-4857-b9bc-ed19b09acda4&userId=db0f6335-27b2-4b00-acb1-bb1414fdc13f&cache=v2);
+	background-attachment: fixed;
+	width: 100%;
+	min-height: 100vh;
+	z-index: -1;
+	animation: stars-move-in 1000ms 300ms forwards;
+	opacity: 0;
+	}
+	@keyframes stars-move-in {
+	from {
+	background-position-y: -100px;
+	}
+	to {
+	opacity: 1;
+	background-position-y: 0;
+	}
+	}
+	.forest {
+	position: absolute;
+	bottom: -300px;
+	left: 0;
+	background: url(https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F25bb5944-e49b-4e34-b4fd-374d5a7598ea%2FTrees.svg?table=block&id=6b86c13f-58f6-4ba4-8aeb-5c85acdfca3f&spaceId=1aa618a7-2041-4857-b9bc-ed19b09acda4&userId=db0f6335-27b2-4b00-acb1-bb1414fdc13f&cache=v2) bottom left repeat-x;
+	background-size: cover;
+	width: 100%;
+	height: 80%;
+	opacity: 0;
+	animation: forest-move-in 1000ms 500ms forwards;
+	border-bottom: 300px solid #181d23;
+	}
+	@keyframes forest-move-in {
+	from {
+	background-position-y: 150%;
+	}
+	to {
+		opacity: 1;
+background-position-y: 100%;
+}
+}
+.container {
+width: fit-content;
+position: absolute;
+right: 0;
+top: 50%;
+left: 50%;
+opacity: 0;
+transform: translate(-50%, -50%);
+animation: text-fade-in 1000ms 800ms forwards;
+}
+@keyframes text-fade-in {
+from {
+right: 0;
+}
+to {
+opacity: 1;
+right: 25%;
+}
+}
+.container h1 {
+font-size: 65px;
+font-weight: normal;
+font-style: italic;
+color: #fafafa;
+line-height: 65px;
+}
+.container p {
+font-size: 28px;
+font-weight: normal;
+color: #fafafa;
+line-height: 32px;
+}
